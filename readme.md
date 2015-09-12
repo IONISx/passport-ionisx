@@ -3,6 +3,7 @@
 [![Dependencies status](https://david-dm.org/IONISx/passport-ionisx.svg)](https://david-dm.org/IONISx/passport-ionisx)
 [![Dev dependencies status](https://david-dm.org/IONISx/passport-ionisx/dev-status.svg)](https://david-dm.org/IONISx/passport-ionisx#info=devDependencies)
 [![Coverage status](http://codecov.io/github/IONISx/passport-ionisx/coverage.svg?branch=master)](http://codecov.io/github/IONISx/passport-ionisx?branch=master)
+[![npm version](https://img.shields.io/npm/v/passport-ionisx.svg)](https://www.npmjs.com/package/passport-ionisx)
 
 > [Passport](http://passportjs.org/) strategy for authenticating with
 [IONISx](https://IONISx) using the OAuth 2.0 API.
