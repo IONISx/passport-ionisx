@@ -1,0 +1,14 @@
+general:
+  artifacts:
+    - coverage
+
+test:
+  override:
+    # Run tests for the ci environment specifically
+    - grunt test:ci
+
+  post:
+    # Generate coverage report
+    - istanbul cover _mocha -- -R dot
+    # Upload coverage report to codecov.io
+    - codecov < ./coverage/lcov.info
