@@ -1,7 +1,7 @@
 # passport-ionisx [![Build status](https://circleci.com/gh/IONISx/passport-ionisx.svg?style=svg)](https://circleci.com/gh/IONISx/passport-ionisx)
 
-[![Dependencies status](https://david-dm.org/tusbar/passport-ionisx.svg)](https://david-dm.org/tusbar/passport-ionisx)
-[![Dev dependencies status](https://david-dm.org/tusbar/passport-ionisx/dev-status.svg)](https://david-dm.org/tusbar/passport-ionisx#info=devDependencies)
+[![Dependencies status](https://david-dm.org/IONISx/passport-ionisx.svg)](https://david-dm.org/IONISx/passport-ionisx)
+[![Dev dependencies status](https://david-dm.org/IONISx/passport-ionisx/dev-status.svg)](https://david-dm.org/IONISx/passport-ionisx#info=devDependencies)
 [![Coverage status](http://codecov.io/github/IONISx/passport-ionisx/coverage.svg?branch=master)](http://codecov.io/github/IONISx/passport-ionisx?branch=master)
 
 > [Passport](http://passportjs.org/) strategy for authenticating with
