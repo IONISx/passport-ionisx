@@ -1,5 +1,6 @@
 # passport-ionisx [![Build status](https://circleci.com/gh/IONISx/passport-ionisx.svg?style=svg)](https://circleci.com/gh/IONISx/passport-ionisx)
 
+[![Build Status](https://travis-ci.org/IONISx/passport-ionisx.svg?branch=master)](https://travis-ci.org/IONISx/passport-ionisx)
 [![Dependencies status](https://david-dm.org/IONISx/passport-ionisx.svg)](https://david-dm.org/IONISx/passport-ionisx)
 [![Dev dependencies status](https://david-dm.org/IONISx/passport-ionisx/dev-status.svg)](https://david-dm.org/IONISx/passport-ionisx#info=devDependencies)
 [![Coverage status](http://codecov.io/github/IONISx/passport-ionisx/coverage.svg?branch=master)](http://codecov.io/github/IONISx/passport-ionisx?branch=master)
@@ -70,9 +71,8 @@ app.get('/auth/ionisx/callback',
 ## Tests
 
 ```shell
-$ npm install -g grunt-cli
 $ npm install --dev
-$ grunt test
+$ gulp test
 ```
 
 ## Development
