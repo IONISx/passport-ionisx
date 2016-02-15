@@ -1,9 +1,10 @@
-/* global describe, it, expect, before */
+/* global describe, it, expect, before, nock */
 /* jshint expr: true */
 
-var IonisxStrategy  = require('../lib/strategy');
-var fs              = require('fs');
+var IonisxStrategy     = require('../lib/strategy');
 
+var InternalOAuthError = require('passport-oauth2').InternalOAuthError;
+var fs                 = require('fs');
 
 // ## //
 
@@ -23,6 +24,44 @@ describe('strategy', function () {
         expect(this.strategy._oauth2._customHeaders['User-Agent']).to.equal('passport-ionisx');
     });
 
+    describe('missing arguments', function () {
+        it('should fail if the callback is not specified', function () {
+            var f = function () {
+                return new IonisxStrategy();
+            };
+
+            expect(f).to.throw();
+        });
+
+        it('should fail if the clientID is not specified', function () {
+            var f = function () {
+                return new IonisxStrategy(null, function () {});
+            };
+
+            expect(f).to.throw();
+        });
+
+        it('should fail if the clientSecret is not specified', function () {
+            var f = function () {
+                return new IonisxStrategy({
+                    clientID: 'specified'
+                }, function () {});
+            };
+
+            expect(f).to.throw();
+        });
+
+        it('should fail if the clientSecret is not specified', function () {
+            var f = function () {
+                return new IonisxStrategy({
+                    clientID: 'specified',
+                    clientSecret: 'specified too'
+                }, function () {});
+            };
+
+            expect(f()).to.be.ok;
+        });
+    });
 
     describe('constructed with user agent option', function () {
         before(function () {
@@ -108,6 +147,47 @@ describe('strategy', function () {
 
         it('should have set the _json property', function () {
             expect(this.profile._json).to.be.an('object');
+        });
+    });
+
+    describe('connection error', function () {
+        before(function () {
+            this.strategy = new IonisxStrategy({
+                clientID: 'ABC123',
+                clientSecret: 'secret',
+                userProfileURL: '/profile'
+            }, function () {});
+        });
+
+        it('should fail if the route is not reachable', function (done) {
+            this.strategy.userProfile('token', function (err, profile) {
+                expect(err).to.be.ok;
+                expect(err).to.be.an.instanceof(InternalOAuthError);
+                expect(profile).to.be.undefined;
+                done();
+            });
+        });
+    });
+
+    describe('json parsing error', function () {
+        before(function () {
+            this.strategy = new IonisxStrategy({
+                clientID: 'ABC123',
+                clientSecret: 'secret',
+                baseURL: 'http://foo.com',
+            }, function () {});
+
+            nock('http://foo.com')
+                .get('/api/user/me')
+                .reply('this json is not json {}');
+        });
+
+        it('should fail if JSON is not parse-able', function (done) {
+            this.strategy.userProfile('token', function (err, profile) {
+                expect(err).to.be.an.instanceof(Error);
+                expect(profile).to.be.undefined;
+                done();
+            });
         });
     });
 });
