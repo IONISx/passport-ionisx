@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/IONISx/passport-ionisx.svg?branch=master)](https://travis-ci.org/IONISx/passport-ionisx)
 [![Dependencies status](https://david-dm.org/IONISx/passport-ionisx.svg)](https://david-dm.org/IONISx/passport-ionisx)
 [![Dev dependencies status](https://david-dm.org/IONISx/passport-ionisx/dev-status.svg)](https://david-dm.org/IONISx/passport-ionisx#info=devDependencies)
-[![Coverage status](http://codecov.io/github/IONISx/passport-ionisx/coverage.svg?branch=master)](http://codecov.io/github/IONISx/passport-ionisx?branch=master)
+[![codecov](https://codecov.io/gh/IONISx/passport-ionisx/branch/master/graph/badge.svg)](https://codecov.io/gh/IONISx/passport-ionisx)
 [![npm version](https://img.shields.io/npm/v/passport-ionisx.svg)](https://www.npmjs.com/package/passport-ionisx)
 
 > [Passport](http://passportjs.org/) strategy for authenticating with
