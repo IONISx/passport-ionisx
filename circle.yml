@@ -9,4 +9,4 @@ test:
 
   post:
     # Upload coverage report to codecov.io
-    - codecov < ./coverage/lcov.info
+    - codecov --disable=gcov

@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "codecov.io": "0.1.6",
+    "codecov": "1.0.1",
     "gulp": "3.9.1",
     "gulp-eslint": "2.0.0",
     "gulp-istanbul": "0.10.4",
