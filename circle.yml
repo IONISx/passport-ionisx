@@ -1,6 +1,12 @@
+machine:
+  node:
+    version: 0.12
+
+
 general:
   artifacts:
     - coverage
+
 
 test:
   override:
@@ -9,4 +15,4 @@ test:
 
   post:
     # Upload coverage report to codecov.io
-    - codecov < ./coverage/lcov.info
+    - codecov --disable=gcov
