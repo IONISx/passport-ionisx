@@ -41,21 +41,10 @@ describe('strategy', function () {
             expect(f).to.throw();
         });
 
-        it('should fail if the clientSecret is not specified', function () {
+        it('should not fail if the clientSecret is not specified', function () {
             var f = function () {
                 return new IonisxStrategy({
                     clientID: 'specified'
-                }, function () {});
-            };
-
-            expect(f).to.throw();
-        });
-
-        it('should fail if the clientSecret is not specified', function () {
-            var f = function () {
-                return new IonisxStrategy({
-                    clientID: 'specified',
-                    clientSecret: 'specified too'
                 }, function () {});
             };
 
