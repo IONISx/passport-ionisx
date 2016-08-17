@@ -1,6 +1,5 @@
 # passport-ionisx [![Build status](https://circleci.com/gh/IONISx/passport-ionisx.svg?style=svg)](https://circleci.com/gh/IONISx/passport-ionisx)
 
-[![Build Status](https://travis-ci.org/IONISx/passport-ionisx.svg?branch=master)](https://travis-ci.org/IONISx/passport-ionisx)
 [![Dependencies status](https://david-dm.org/IONISx/passport-ionisx.svg)](https://david-dm.org/IONISx/passport-ionisx)
 [![Dev dependencies status](https://david-dm.org/IONISx/passport-ionisx/dev-status.svg)](https://david-dm.org/IONISx/passport-ionisx#info=devDependencies)
 [![codecov](https://codecov.io/gh/IONISx/passport-ionisx/branch/master/graph/badge.svg)](https://codecov.io/gh/IONISx/passport-ionisx)
